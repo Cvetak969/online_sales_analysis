@@ -13,3 +13,15 @@ manager.add_product(p3)
 
 manager.display_products()
 print("Ukupna vrednost:", manager.total_value())
+from cart import Cart
+import random
+
+cart = Cart()
+
+random_products = random.sample(manager.products, 3)
+
+for p in random_products:
+    cart.add_to_cart(p)
+
+cart.display_cart()
+print("Ukupno za naplatu:", cart.total_price())
